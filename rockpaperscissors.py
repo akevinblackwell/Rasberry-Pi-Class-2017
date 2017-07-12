@@ -8,7 +8,7 @@ done = False
 # asks if players choose rock, paper, or scissors or decides to quit.
 while not done:
     rockpaperscissors1 = raw_input("Does Player1 choose Rock, Paper, Scissors, or Quit? ")
-
+    rockpaperscissors1 = rockpaperscissors1.lower()
     rockpaperscissors2 = raw_input("Does Player2 choose Rock, Paper, Scissors, or Quit? ")
 # defines all inputs and decides the proper output and print who wins or if it were a tie.
     if rockpaperscissors1 == "quit" or rockpaperscissors2 == "quit":
