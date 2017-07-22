@@ -1,4 +1,18 @@
-import time, turtle
+'''
+drawO function for tic tac toe
+
+drawO(Oturtle, x, y, d, color)
+
+where
+     Oturtle is the turtle used to draw
+     x - is horizontal coordinate
+     y - is verticle coordinate
+     d - is diameter of O
+
+'''
+
+
+import turtle
 
 
 def drawO(Oturtle, x, y, d, color):
@@ -20,7 +34,7 @@ def drawO(Oturtle, x, y, d, color):
 
      return
 
-turtle.setup(400,300)
-
-tictactoeturtle = turtle.Turtle()
-drawO(tictactoeturtle, 0,0, 100, "black")
+##turtle.setup(400,300)
+##
+##tictactoeturtle = turtle.Turtle()
+##drawO(tictactoeturtle, 0,0, 100, "maroon")
