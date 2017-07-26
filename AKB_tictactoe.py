@@ -32,23 +32,23 @@ Xwin = ('XXX######','###XXX###','######XXX')
 
 Owin = ('XXX######','###XXX###','######XXX')
 
-for turn in range(9)
-    raw_input()
-    if CurrentState in Xwin:
-        print("X wins")
-        break;
-    elif CurrentState in Owin:
-        print("O Win")
-        break;
-
-if turn = 8:
-    print("Cat")
-    
-
-CurrentStatus = "........."
-
-"..X......"
-
+##for turn in range(9)
+##    raw_input()
+##    if CurrentState in Xwin:
+##        print("X wins")
+##        break;
+##    elif CurrentState in Owin:
+##        print("O Win")
+##        break;
+##
+##if turn = 8:
+##    print("Cat")
+##    
+##
+##CurrentStatus = "........."
+##
+##"..X......"
+##
 
 
 
