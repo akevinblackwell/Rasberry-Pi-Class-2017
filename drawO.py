@@ -26,7 +26,7 @@ def drawO(Oturtle, x, y, d, color):
      Oturtle.circle(d)
      Oturtle.end_fill()
 
-     Oturtle.setposition(x,y+25-d)
+     Oturtle.setposition(x,y+15-d)
      Oturtle.begin_fill()
      Oturtle.fillcolor("white")
      Oturtle.circle(d*0.75)
