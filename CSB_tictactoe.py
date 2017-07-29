@@ -1,61 +1,73 @@
 import turtle
-from DrawX import drawX
+from ButtonPush import ButtonPush
 
-def fillcell(cellno,XorO):
-    if cellno == 1:
-        drawX(tictactoeturtle, -120, 120, 50, "black")
-    elif cellno == 2:
-        drawX(tictactoeturtle, 0, 120, 50, "black")
-    elif cellno == 3:
-        drawX(tictactoeturtle, 120, 120, 50, "black")
-    elif cellno == 4:
-        drawX(tictactoeturtle, -120, 0, 50, "black")
-    elif cellno == 5:
-        drawX(tictactoeturtle, 0, 0, 50, "black")
-    elif cellno == 6:
-        drawX(tictactoeturtle, 120, 0, 50, "black")
-    elif cellno == 7:
-        drawX(tictactoeturtle, -120, -120, 50, "black")
-    elif cellno == 8:
-        drawX(tictactoeturtle, 0, -120, 50, "black")
-    elif cellno == 9:
-        drawX(tictactoeturtle, 120, -120, 50, "black")
+from DrawX import drawX
+from drawO import drawO
+
+def drawXorO(turtleXorO,X,Y,size,color,XorO2):
+    if XorO2 == True:
+        drawX(tictactoeturtle, X, Y, size, color)
+    else:
+        drawO(tictactoeturtle, X, Y, size, color)
     return
 
-turtle.setup(800,600)       # specifies the screen size.
+def fillcell(cellnum,XorO):
+    if cellnum == 1:
+        drawXorO(tictactoeturtle, -120, 120, 50, "black",XorO)
+    elif cellnum == 2:
+        drawXorO(tictactoeturtle, 0, 120, 50, "black",XorO)
+    elif cellnum == 3:
+        drawXorO(tictactoeturtle, 120, 120, 50, "black",XorO)
+    elif cellnum == 4:
+        drawXorO(tictactoeturtle, -120, 0, 50, "black",XorO)
+    elif cellnum == 5:
+        drawXorO(tictactoeturtle, 0, 0, 50, "black",XorO)
+    elif cellnum == 6:
+        drawXorO(tictactoeturtle, 120, 0, 50, "black",XorO)
+    elif cellnum == 7:
+        drawXorO(tictactoeturtle, -120, -120, 50, "black",XorO)
+    elif cellnum == 8:
+        drawXorO(tictactoeturtle, 0, -120, 50, "black",XorO)
+    elif cellnum == 9:
+        drawXorO(tictactoeturtle, 120, -120, 50, "black",XorO)
+    return
 
+
+print("BLAH")
+turtle.setup(800,600)       # specifies the screen size.
 tictactoeturtle = turtle.Turtle()
 
-turtle.penup()
-turtle.setposition(-60,60+120)
-turtle.pendown()
-turtle.setposition(-60,-60*3)
-turtle.penup()
+tictactoeturtle.penup()
+tictactoeturtle.setposition(-60,60+120)
+tictactoeturtle.pendown()
+tictactoeturtle.setposition(-60,-60*3)
+tictactoeturtle.penup()
 
-turtle.penup()
-turtle.setposition(60,60+120)
-turtle.pendown()
-turtle.setposition(60,-60*3)
-turtle.penup()
+tictactoeturtle.penup()
+tictactoeturtle.setposition(60,60+120)
+tictactoeturtle.pendown()
+tictactoeturtle.setposition(60,-60*3)
+tictactoeturtle.penup()
 
-turtle.penup()
-turtle.setposition(60+120,-60)
-turtle.pendown()
-turtle.setposition(-60*3,-60)
-turtle.penup()
+tictactoeturtle.penup()
+tictactoeturtle.setposition(60+120,-60)
+tictactoeturtle.pendown()
+tictactoeturtle.setposition(-60*3,-60)
+tictactoeturtle.penup()
 
-turtle.penup()
-turtle.setposition(60+120,60)
-turtle.pendown()
-turtle.setposition(-60*3,60)
-turtle.penup()
+tictactoeturtle.penup()
+tictactoeturtle.setposition(60+120,60)
+tictactoeturtle.pendown()
+tictactoeturtle.setposition(-60*3,60)
+tictactoeturtle.penup()
 
-fillcell(1,True)
-fillcell(2,True)
-fillcell(3,True)
-fillcell(4,True)
-fillcell(5,True)
-fillcell(6,True)
-fillcell(7,True)
-fillcell(8,True)
-fillcell(9,True)
+for x in range(0,9):
+    cell = ButtonPush()
+    if not x in (1,3,5,7,9):
+        fillcell(cell,True)
+    else:
+        fillcell(cell,False)
+
+
+
+

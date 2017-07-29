@@ -51,33 +51,35 @@ def fillcell(cellno,XorO):
         drawX(tictactoeturtle, 120, -120, 50, "black")
     return
 
-
+tictactoeturtle = turtle.Turtle()
 while End == True: 
     letter = raw_input("Do you want to be X or O?")
     if letter == "O":
         place = raw_input("Enter a position by detailing all the places before spot as '.'") 
         if place == "1":
-            tictactoeturtle = turtle.Turtle()
             drawO(tictactoeturtle, -115,115, 50, "maroon")
+        elif place == '2':
+            drawO(tictactoeturtle, 0,115,50, "black")
 
     elif letter == "X":
-            Place = raw_input("Enter a position by detailing all the places before spot as '.'") 
-            if Place == "2":
-                tictactoeturtle = turtle.Turtle()
-                drawX(tictactoeturtle, 0,115,50, "black")
-
-   
-    elif letter == "O":
-            pLace = raw_input("Enter a position by detailing all the places before spot as '.'") 
-            if pLace == "4":
-                tictactoeturtle = turtle.Turtle()
-                drawO(tictactoeturtle, -1,78, 50, "maroon")
-
-    elif letter == "X":
-            PLace = raw_input("Enter a position by detailing all the places before spot as '.'") 
-            if PLace == "3":
-                tictactoeturtle = turtle.Turtle()
-                drawX(tictactoeturtle, -5,11,50, "black")
+        place = raw_input("Enter a position by detailing all the places before spot as '.'") 
+        if place == "1":
+            drawX(tictactoeturtle, -115,115, 50, "maroon")
+        elif place == "2":
+            drawX(tictactoeturtle, 0,115,50, "black")
+##
+##   
+##    elif letter == "O":
+##            pLace = raw_input("Enter a position by detailing all the places before spot as '.'") 
+##            if pLace == "4":
+##                tictactoeturtle = turtle.Turtle()
+##                drawO(tictactoeturtle, -1,78, 50, "maroon")
+##
+##    elif letter == "X":
+##            PLace = raw_input("Enter a position by detailing all the places before spot as '.'") 
+##            if PLace == "3":
+##                tictactoeturtle = turtle.Turtle()
+##                drawX(tictactoeturtle, -5,11,50, "black")
 
 
 
