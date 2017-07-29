@@ -51,15 +51,18 @@ def fillcell(cellno,XorO):
         drawX(tictactoeturtle, 120, -120, 50, "black")
     return
 
-
+tictactoeturtle = turtle.Turtle()
 while End == True: 
     letter = raw_input("Do you want to be X or O?")
     if letter == "O":
         place = raw_input("Enter a position by detailing all the places before spot as '.'") 
         if place == "1":
-            tictactoeturtle = turtle.Turtle()
             drawO(tictactoeturtle, -115,115, 50, "maroon")
-
+        elif place == "2":
+           drawX(tictactoeturtle, 0,115,50, "black")
+        elif place == "3":
+           drawO(tictactoeturtle, 115,115,50, "black")
+                 
     elif letter == "X":
             Place = raw_input("Enter a position by detailing all the places before spot as '.'") 
             if Place == "2":
