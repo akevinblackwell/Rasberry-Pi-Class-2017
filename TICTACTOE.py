@@ -58,9 +58,17 @@ while End == True:
         place = raw_input("Enter a position by detailing all the places before spot as '.'") 
         if place == "1":
             drawO(tictactoeturtle, -115,115, 50, "maroon")
+<<<<<<< HEAD
         elif place == '2':
             drawO(tictactoeturtle, 0,115,50, "black")
 
+=======
+        elif place == "2":
+           drawX(tictactoeturtle, 0,115,50, "black")
+        elif place == "3":
+           drawO(tictactoeturtle, 115,115,50, "black")
+                 
+>>>>>>> 6e4715b981daadae28153c872cf6d43317c51dac
     elif letter == "X":
         place = raw_input("Enter a position by detailing all the places before spot as '.'") 
         if place == "1":
