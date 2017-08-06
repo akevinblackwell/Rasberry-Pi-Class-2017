@@ -68,8 +68,8 @@ catflag = False
 
 ButtonPushSetupSetdown(True)
 while not catflag:
-    cell = int(raw_input("CellNo"))
-#    cell = ButtonPush()
+#    cell = int(raw_input("CellNo"))  # uncomment if you want to use keyboard instead of buttons.
+    cell = ButtonPush()
     if squares[cell-1] == ".":  #is the cell empty?
         x = x+1
         if x % 2 == 1:
