@@ -100,7 +100,7 @@ while True:
             if square == ".":
                 exit
             else:
-                print "CAT.  Everyone Loses!!!!"
+                print "CAT"
         print(squares)
         
     
