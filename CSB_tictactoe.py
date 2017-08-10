@@ -59,16 +59,33 @@ tictactoeturtle.pendown()
 tictactoeturtle.setposition(-60*3,60)
 tictactoeturtle.penup()
 
+
+squares = [".", ".", ".", ".", ".", ".", ".", ".", "."]
+
+x = 0
+
+catflag = False
+
 ButtonPushSetupSetdown(True)
-for x in range(0,9):
+while not catflag:
+#    cell = int(raw_input("CellNo"))  # uncomment if you want to use keyboard instead of buttons.
     cell = ButtonPush()
-    if not x in (1,3,5,7,9):
-        fillcell(cell,True)
-    else:
-        fillcell(cell,False)
+    if squares[cell-1] == ".":  #is the cell empty?
+        x = x+1
+        if x % 2 == 1:
+            fillcell(cell,True)   #drawX
+            squares[cell-1] = "X"
+        else:
+            fillcell(cell,False)   #drawO
+            squares[cell-1] = "O"
+        catflag = True
+        for square in squares:
+            if square == ".":
+                catflag = False
+        
+    if catflag == True:
+         print("Cat")
+    print(squares)
         
 ButtonPushSetupSetdown(False)
-
-
-
 
