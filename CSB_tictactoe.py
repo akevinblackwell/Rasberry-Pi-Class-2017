@@ -1,6 +1,6 @@
 import turtle
 from ButtonPush import ButtonPush, ButtonPushSetupSetdown
-
+from winnercheck import winnercheck
 from DrawX import drawX
 from drawO import drawO
 
@@ -63,13 +63,13 @@ tictactoeturtle.penup()
 squares = [".", ".", ".", ".", ".", ".", ".", ".", "."]
 
 x = 0
-
-catflag = False
+winnerstatus = '.'
 
 ButtonPushSetupSetdown(True)
-while not catflag:
+while winnerstatus=='.':
 #    cell = int(raw_input("CellNo"))  # uncomment if you want to use keyboard instead of buttons.
     cell = ButtonPush()
+    
     if squares[cell-1] == ".":  #is the cell empty?
         x = x+1
         if x % 2 == 1:
@@ -78,14 +78,16 @@ while not catflag:
         else:
             fillcell(cell,False)   #drawO
             squares[cell-1] = "O"
-        catflag = True
-        for square in squares:
-            if square == ".":
-                catflag = False
-        
-    if catflag == True:
-         print("Cat")
+
+    winnerstatus = winnercheck(squares)
+    print(winnerstatus)
+    if winnerstatus == "X":
+        print("X Wins")
+    elif winnerstatus == "O":
+        print("O Wins")
+    elif winnerstatus == "C":
+        print("Cat")
+    
     print(squares)
         
 ButtonPushSetupSetdown(False)
-

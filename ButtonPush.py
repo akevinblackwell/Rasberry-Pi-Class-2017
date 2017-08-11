@@ -19,7 +19,6 @@ def ButtonPushSetupSetdown(StartStop):
 
         # First, configure the pins for input.
         for x in range(0,9):
-            print(cells[x])
             GPIO.setup(cells[x], GPIO.IN)
     else:
         GPIO.cleanup()            # clean up all GPIO.
