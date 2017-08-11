@@ -1,6 +1,7 @@
 from DrawX import drawX
 from drawO import drawO
 from ButtonPush import ButtonPush, ButtonPushSetupSetdown
+from winnercheck import winnercheck
 ##from pymouse import PyMouseEvent
 import turtle
 
@@ -84,10 +85,12 @@ squares = [".", ".", ".", ".", ".", ".", ".", ".", "."]
 
 x = 0
 
+winnerstatus = "."
+
 ButtonPushSetupSetdown(True)
-while True:
-##    cell = ButtonPush()
-    cell = int(raw_input("CELLNO>$"))
+while winnerstatus = True
+    cell = ButtonPush()
+##    cell = int(raw_input("CELLNO>$"))
     if squares[cell-1] ==".":
         x = x+1
         if x %2 == 1:
@@ -96,11 +99,18 @@ while True:
         else:
             fillcell(cell, False)
             squares[cell-1] = "O"
-        for square in squares:
-            if square == ".":
-                exit
-            else:
-                print "CAT.  Everyone Loses!!!!"
+
+    winnerstatus = winnercheck(squares)
+    if winnerstatus == "X":
+        print "X Wins"
+        winnerstatus = False
+    elif winnerstatus == "Y":
+        print "Y Wins"
+        winnerstatus = False
+    elif winnerstatus == "C":
+        print "Cat (no-one Wins!)"
+        winnerstatus = False
+        
         print(squares)
         
     

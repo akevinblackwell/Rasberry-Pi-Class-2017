@@ -31,12 +31,13 @@ def ButtonPush():
     cellbutton = -1
 
 # A list of pin numbers for the GPIO inputs we are using.
+
     cells = (3,5,7,29,31,26,24,21,19)
     
     while cellbutton == -1:    # while no button pushed yet,
         for x in range(0,9):  # check each pin to see if it is LOW.
              if   GPIO.input(cells[x]) == GPIO.LOW:
                 cellbutton = x # if it is, cell cell button equal to the cell number
-
     return cellbutton+1         # return the cell button plus 1 (1..9(
+
 
