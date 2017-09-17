@@ -80,7 +80,6 @@ while winnerstatus=='.':
             squares[cell-1] = "O"
 
     winnerstatus = winnercheck(squares)
-    print(winnerstatus)
     if winnerstatus == "X":
         print("X Wins")
     elif winnerstatus == "O":
